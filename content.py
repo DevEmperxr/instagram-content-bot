@@ -70,5 +70,5 @@ while(True):
         print('uploaded succesfully at '+ datetime.datetime.now().strftime("%H:%M:%S"))
         print('next post in 3 hours')
         os.remove(i.url[18:])
-        print('deleted image '+ count)
+        print('deleted image '+ str(count))
         sleep(1*60*60)
