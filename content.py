@@ -65,7 +65,7 @@ while(True):
         #make caption variable here with hashtags and stuff
         print('download succesful!')
         print('uploading post '+ str(count) + '...')
-        bot.photo_upload(i.url[18:],caption= i.title + '/n' + hashtags)
+        bot.photo_upload(i.url[18:],caption= i.title + '\n' + hashtags)
         bot.photo_upload_to_story(i.url[18:])
         print('uploaded succesfully at '+ datetime.datetime.now().strftime("%H:%M:%S"))
         print('next post in 3 hours')
