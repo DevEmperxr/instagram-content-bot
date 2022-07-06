@@ -27,9 +27,9 @@ sleep(1)
 
 bot = instagrapi.Client()
 print('enter instagram username: ')
-uname = input()
+uname ='memes.i.relate.to'
 print('inter instagram password:')
-pword = input()
+pword = 'piloka12'
 print('Trying to login...')
 bot.login(uname,pword)
 userID = bot.user_id
