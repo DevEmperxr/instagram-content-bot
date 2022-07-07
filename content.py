@@ -28,7 +28,7 @@ sleep(1)
 bot = instagrapi.Client()
 print('enter instagram username: ')
 uname ='memes.i.relate.to'
-print('inter instagram password:')
+print('enter instagram password:')
 pword = 'piloka12'
 print('Trying to login...')
 bot.login(uname,pword)
@@ -50,11 +50,12 @@ while(True):
     posts = reddit.subreddit('meirl').top(time_filter= 'day')
     queue = []
     #adds to queue only pictures
+    index = 0
     print('adding compatible posts to the queue...')
     while(len(queue) < 8):
-        for i in posts:
-            if i.url.endswith('.jpg'):
-                queue.append(i)
+        if posts[index].url.endswith('.jpg'):
+            queue.append(posts[index])
+        index =+1
     #post items in queue
     print('queue started!')
     count = 0
@@ -71,4 +72,4 @@ while(True):
         print('next post in 3 hours')
         os.remove(i.url[18:])
         print('deleted image '+ str(count))
-        sleep(1*60*60)
+        sleep(3*60*60)
