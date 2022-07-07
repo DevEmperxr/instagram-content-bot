@@ -50,12 +50,11 @@ while(True):
     posts = reddit.subreddit('meirl').top(time_filter= 'day')
     queue = []
     #adds to queue only pictures
-    index = 0
     print('adding compatible posts to the queue...')
-    while(len(queue) < 8):
-        if posts[index].url.endswith('.jpg'):
-            queue.append(posts[index])
-        index =+1
+    for i in posts :
+        if len(queue) < 8:
+            if i.url.endswith('.jpg'):
+                queue.append(i)
     #post items in queue
     print('queue started!')
     count = 0
